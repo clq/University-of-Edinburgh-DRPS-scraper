@@ -12,6 +12,6 @@ DESCRIPTION .description (Course Description. Note that formatting may be all ov
 DRPSURL .url (DRPS page for the course)
 SEMESTER .semester (Semester, "1" means first semester, "2" means second semester, "3" means full year, and "0" means undefined
 
-
+Addition.
 
 .timetable
