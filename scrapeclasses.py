@@ -98,7 +98,7 @@ class scraping:
     def schoolcode (self):
         code = self.use
         code = re.sub('.*<a href="cx_s_su', "SU", code)
-        code = re.sub('.htm">School of.*', "", code)
+        code = re.sub('.htm">.*', "", code)
         code = re.sub('\n', "", code)
         return code
     def schoolname (self):
