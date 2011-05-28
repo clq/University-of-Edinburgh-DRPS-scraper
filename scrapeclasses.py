@@ -104,9 +104,10 @@ class scraping:
     def schoolname (self):
         name = self.use
         name = re.sub('.*School of ', "", name)
+        name = re.sub('.*Business School', "Business School", name)
         name = re.sub('</a> :.*', "", name)
         name = re.sub('\)</a>.*', "", name)
-        name = re.sub('\n', "", name)
+        name = re.sub('\n', "", name).strip()
         return name
     def SCQF (self):
         level = self.use
