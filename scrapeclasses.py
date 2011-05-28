@@ -50,9 +50,9 @@ class datafromurl:
                 total = re.sub('\n', "  ", total)                
                 self.description = total
             elif 'an="6">Delivery period' in line:
-                if (('Semester 2' in line) or ('Sem 2' in line)):
+                if (('Semester 2' in line) or ('semester 2' in line) or ('Sem 2' in line) or ('sem 2' in line)):
                     self.semester = '2'
-                elif (('Semester 1' in line) or ('Sem 1' in line)):
+                elif (('Semester 1' in line) or ('semester 1' in line) or ('Sem 1' in line) or ('sem 1' in line)):
                     self.semester = '1'
                 elif 'Full Year' in line:
                     self.semester = '3'
