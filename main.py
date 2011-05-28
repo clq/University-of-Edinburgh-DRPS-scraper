@@ -21,8 +21,7 @@ class subjectpage:
                         finder = fromurl(url)
                         ha = finder.run()
                         url2 = url
-                        print ""
-                        print ""
+
 
 class schoolpage:
     def __init__ (self, url):
@@ -54,7 +53,9 @@ class mainpage:
                 print url
                 scrapeschool = schoolpage(url)
                 hm = scrapeschool.fromschoolpage()
-                
+
+
+output = open('output.txt', 'w')                
 #Main program
 program = mainpage("http://www.star.euclid.ed.ac.uk/ipp/cx_schindex.htm")
 hm = program.frommainpage()

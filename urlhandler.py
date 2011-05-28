@@ -19,16 +19,17 @@ class fromurl:
         timestart = ["Location", "Type", "Description", "Weeks", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
         self.timetable = [timestart]
     def run (self):
+        output = open('output.txt', 'a')
         monb = False
         tueb = False
         wedb = False
         thub = False
         frib = False
-        mon = "Mon:"
-        tue = "Tue:"
-        wed = "Wed:"
-        thu = "Thu:"
-        fri = "Fri:"
+        mon = "Mon"
+        tue = "Tue"
+        wed = "Wed"
+        thu = "Thu"
+        fri = "Fri"
         o = datafromurl(self.url)
         out = o.run()
         localtimetable = o.timetable
@@ -38,36 +39,36 @@ class fromurl:
             if not line:
                 break
             if "GRADLEVEL" in line:
-                print o.gradlevel,
+                print >> output, o.gradlevel,
             if "COURSENAME" in line:
-                print '"' + o.coursename + '"',  
+                print >> output, '"' + o.coursename + '"',  
             if "COURSECODE" in line:
-                print o.coursecode,
+                print >> output, o.coursecode,
             if "SCHOOLCODE" in line:
-                print o.schoolcode,  
+                print >> output, o.schoolcode,  
             if "SCHOOLNAME" in line:
-                print '"' + o.schoolname + '"',
+                print >> output, '"' + o.schoolname + '"',
             if "COLLEGENAME" in line:
-                print '"' + o.collegename + '"',
+                print >> output, '"' + o.collegename + '"',
             if "SCQFLEVEL" in line:
-                print o.SCQF,  
+                print >> output, o.SCQF,  
             if "NORMALYEAR" in line:
-                print o.normyear,
+                print >> output, o.normyear,
             if "CREDITS" in line:
-                print o.credits,
+                print >> output, o.credits,
             if "COURSEPAGE" in line:
-                print o.coursepage,  
+                print >> output, o.coursepage,  
             if "DESCRIPTION" in line:
-                print '"' + o.description + '"',
+                print >> output, '"' + o.description + '"',
             if "DRPSURL" in line:
-                print o.url,  
+                print >> output, o.url,  
             if "SEMESTER" in line:
-                print o.semester,
+                print >> output, o.semester,
         for f in localtimetable:
             if f[4]:
                 string = f[4]
                 monb = True
-                mon = mon + " " + '"' + f[0] + '"' + " " + f[1] + " " + '"' + f[2] + '"' + " " + f[3] + " "
+                mon = mon + " " + '"' + f[0] + '"' + " " + '"' + f[1] + '"' + " " + '"' + f[2] + '"' + " " + f[3] + " "
                 string = re.sub('^OR ', "", string)
                 temp = string[:string.index(":")]
                 string = string[string.index(":"):]
@@ -87,7 +88,7 @@ class fromurl:
                     string = string[string.index(":"):]
                     string = re.sub('^:', "", string)
                     temp = temp + string[:2]  
-                    mon = mon + " " + f[0] + " " + f[1] + " " + f[2] + " " + f[3] + " " + temp        
+                    mon = mon + " " + '"' + f[0] + '"' + " " + '"' + f[1] + '"' + " " + '"' + f[2] + '"' + " " + f[3] + " " + temp        
                     string = string[string.index("-"):]
                     string = re.sub('^- ', "", string)
                     temp = string[:string.index(":")]
@@ -98,7 +99,7 @@ class fromurl:
             if f[5]:
                 string = f[5]
                 tueb = True
-                tue = tue + " " + '"' + f[0] + '"' + " " + f[1] + " " + '"' + f[2] + '"' + " " + f[3] + " "
+                tue = tue + " " + '"' + f[0] + '"' + " " + '"' + f[1] + '"' + " " + '"' + f[2] + '"' + " " + f[3] + " "
                 string = re.sub('^OR ', "", string)
                 temp = string[:string.index(":")]
                 string = string[string.index(":"):]
@@ -118,7 +119,7 @@ class fromurl:
                     string = string[string.index(":"):]
                     string = re.sub('^:', "", string)
                     temp = temp + string[:2]  
-                    tue = tue + " " + f[0] + " " + f[1] + " " + f[2] + " " + f[3] + " " + temp        
+                    tue = tue + " " + '"' + f[0] + '"' + " " + '"' + f[1] + '"' + " " + '"' + f[2] + '"' + " " + f[3] + " " + temp 
                     string = string[string.index("-"):]
                     string = re.sub('^- ', "", string)
                     temp = string[:string.index(":")]
@@ -129,7 +130,7 @@ class fromurl:
             if f[6]:
                 string = f[6]
                 wedb = True
-                wed = wed + " " + '"' + f[0] + '"' + " " + f[1] + " " + '"' + f[2] + '"' + " " + f[3] + " "
+                wed = wed + " " + '"' + f[0] + '"' + " " + '"' + f[1] + '"' + " " + '"' + f[2] + '"' + " " + f[3] + " "
                 string = re.sub('^OR ', "", string)
                 temp = string[:string.index(":")]
                 string = string[string.index(":"):]
@@ -149,7 +150,7 @@ class fromurl:
                     string = string[string.index(":"):]
                     string = re.sub('^:', "", string)
                     temp = temp + string[:2]  
-                    wed = wed + " " + f[0] + " " + f[1] + " " + f[2] + " " + f[3] + " " + temp        
+                    wed = wed + " " + '"' + f[0] + '"' + " " + '"' + f[1] + '"' + " " + '"' + f[2] + '"' + " " + f[3] + " " + temp
                     string = string[string.index("-"):]
                     string = re.sub('^- ', "", string)
                     temp = string[:string.index(":")]
@@ -160,7 +161,7 @@ class fromurl:
             if f[7]:
                 string = f[7]
                 thub = True
-                thu = thu + " " + '"' + f[0] + '"' + " " + f[1] + " " + '"' + f[2] + '"' + " " + f[3] + " "
+                thu = thu + " " + '"' + f[0] + '"' + " " + '"' + f[1] + '"' + " " + '"' + f[2] + '"' + " " + f[3] + " "
                 string = re.sub('^OR ', "", string)
                 temp = string[:string.index(":")]
                 string = string[string.index(":"):]
@@ -180,7 +181,7 @@ class fromurl:
                     string = string[string.index(":"):]
                     string = re.sub('^:', "", string)
                     temp = temp + string[:2]  
-                    thu = thu + " " + f[0] + " " + f[1] + " " + f[2] + " " + f[3] + " " + temp        
+                    thu = thu + " " + '"' + f[0] + '"' + " " + '"' + f[1] + '"' + " " + '"' + f[2] + '"' + " " + f[3] + " " + temp
                     string = string[string.index("-"):]
                     string = re.sub('^- ', "", string)
                     temp = string[:string.index(":")]
@@ -191,7 +192,7 @@ class fromurl:
             if f[8]:
                 string = str(f[8])
                 frib = True
-                fri = fri + " " + '"' + f[0] + '"' + " " + f[1] + " " + '"' + f[2] + '"' + " " + f[3] + " "
+                fri = fri + " " + '"' + f[0] + '"' + " " + '"' + f[1] + '"' + " " + '"' + f[2] + '"' + " " + f[3] + " "
                 string = re.sub('^OR ', "", string)
                 temp = string[:string.index(":")]
                 string = string[string.index(":"):]
@@ -211,7 +212,7 @@ class fromurl:
                     string = string[string.index(":"):]
                     string = re.sub('^:', "", string)
                     temp = temp + string[:2]  
-                    fri = fri + " " + f[0] + " " + f[1] + " " + f[2] + " " + f[3] + " " + temp        
+                    fri = fri + " " + '"' + f[0] + '"' + " " + '"' + f[1] + '"' + " " + '"' + f[2] + '"' + " " + f[3] + " " + temp
                     string = string[string.index("-"):]
                     string = re.sub('^- ', "", string)
                     temp = string[:string.index(":")]
@@ -219,16 +220,17 @@ class fromurl:
                     string = re.sub('^:', "", string)
                     temp = temp + string[:2]
                     fri = fri + " " + temp + ";"     
-        print ""
+        print >> output, ""
         if monb == True:
-            print mon
+            print >> output, mon
         if tueb == True:
-            print tue
+            print >> output, tue
         if wedb == True:
-            print wed
+            print >> output, wed
         if thub == True:
-            print thu
+            print >> output, thu
         if frib == True:
-            print fri
+            print >> output, fri
+        print >> output, ""
                     #       if (mon == True):
             
