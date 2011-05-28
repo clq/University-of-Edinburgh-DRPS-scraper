@@ -39,7 +39,6 @@ class fromurl:
             line2 = re.sub('^ ', "", line2)
             if ' ' in line2:
                 line = line2[:line2.index(" ")]
-                print line
                 line2 = line2[line2.index(" "):]
             else:
                 line = line2
