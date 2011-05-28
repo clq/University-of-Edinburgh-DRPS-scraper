@@ -36,5 +36,6 @@ Thu "King's Buildings" "Lecture" "" 1-11 1210 1300; "King's Buildings" "Lecture"
 
 * Some courses have timetable-entries with options (along the lines of "time a" or "time b") At the moment these are outputted as seperate individual events for that day.
 
+6. TODO
 
-
+7. CREDITS
