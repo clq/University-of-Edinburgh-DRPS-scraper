@@ -4,10 +4,12 @@ PARAMETRES MUST BE ON THE FIRST LINE OF THE DOCUMENT. ANYTHING BELOW THE FIRST L
 
 Quick, handy list of available parametres:
 GRADLEVEL, COURSENAME, COURSECODE, SCHOOLCODE, SCHOOLNAME, SCQFLEVEL, NORMALYEAR, CREDITS, COURSEPAGE, DRPSURL, SEMESTER, COLLEGENAME*, DESCRIPTION*
-Parametres markes with * should be used with care.
+Parametres marked with * should be used with care.
 
 Example output of the default configuration:
 "Electrical Engineering 3" ELEE09008 SU748 20 9 2 3 http://www.star.euclid.ed.ac.uk/ipp/cxelee09008.htm
+
+---------------------------------------
 
 In-depth description of the different parametres:
 

@@ -71,5 +71,5 @@ hm = program.frommainpage()
 #hm = scrapesubjects.fromsubjectpage()
 
 #To test individual courses
-#program = fromurl("http://www.star.euclid.ed.ac.uk/ipp/cxbust10023.htm")
+#program = fromurl("http://www.star.euclid.ed.ac.uk/ipp/cxelee09008.htm")
 #running = program.run()
