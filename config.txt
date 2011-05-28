@@ -1,1 +1,41 @@
-GRADLEVEL COURSENAME COURSECODE SCHOOLNAME
+COURSENAME COURSECODE SCHOOLCODE CREDITS SCQFLEVEL SEMESTER NORMALYEAR DRPSURL
+----------------------------------------------------------------------------
+PARAMETRES MUST BE ON THE FIRST LINE OF THE DOCUMENT. ANYTHING BELOW THE FIRST LINE WILL BE IGNORED.
+
+Quick, handy list of available parametres:
+GRADLEVEL, COURSENAME, COURSECODE, SCHOOLCODE, SCHOOLNAME, SCQFLEVEL, NORMALYEAR, CREDITS, COURSEPAGE, DRPSURL, SEMESTER, COLLEGENAME*, DESCRIPTION*
+Parametres markes with * should be used with care.
+
+Example output of the default configuration:
+"Electrical Engineering 3" ELEE09008 SU748 20 9 2 3 http://www.star.euclid.ed.ac.uk/ipp/cxelee09008.htm
+
+In-depth description of the different parametres:
+
+GRADLEVEL - Returns 'UG' if a course is registered as an Undergraduate course, 'PG' if a course is registered as Postgraduate, and 'NA' if a graduate level isn't defined.
+
+COURSENAME - Returns the name of the course surrounded by quotation marks ("). Note that duplicate coursenames are quite common.
+
+COURSECODE - The unique code that identifies every course.
+
+SCHOOLCODE - The unique code identifying the school offering the course surrounded by quotation marks ("). See "School-codes" for a list of which code belongs to which school.
+
+SCHOOLNAME - Name of the school offering the subject. Probably less robust than using the school-code.
+
+COLLEGENAME - Theoretically the name of the College surrounded by quotation marks ("). Rather inconsistent as some lecturers seem to add additional information here. Identification of college is probably better done using school-codes and mapping them to colleges. (see "School code") 
+
+SCQFLEVEL - SCQF level of the course (7 through 11)
+
+NORMALYEAR - The year during which a course is normally taken. Returns 0 if a year isn't defined.
+
+CREDITS - Course-credits
+
+COURSEPAGE - Course website returned as a URL. Returns NA if no course-website is defined.
+
+DESCRIPTION - The course-description surrounded by quotation-marks ("). Note that the formatting of the course description is completely up to the lecturers, may include lists and other elements. The formatting may therefore be all over the place. Any line-breaks are replaced by a double-space, and the description is outputted on a single line.
+
+DRPSURL - The URL to the DRPS-page of the course.
+
+SEMESTER .semester (Semester, "1" means first semester, "2" means second semester, "3" means full year, and "0" means undefined. A bit scetchy in that defined semesters are sometimes not picked up.
+
+
+Weeks can be a range (1-11) or comma-seperated numbers (4,6,8). Note that some full-year courses use 1-22, some don't.

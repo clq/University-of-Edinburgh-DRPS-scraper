@@ -34,10 +34,15 @@ class fromurl:
         out = o.run()
         localtimetable = o.timetable
         config = open('config.txt', 'r')
+        line2 = config.readline()
         while 1:
-            line = config.readline()
-            if not line:
-                break
+            line2 = re.sub('^ ', "", line2)
+            if ' ' in line2:
+                line = line2[:line2.index(" ")]
+                print line
+                line2 = line2[line2.index(" "):]
+            else:
+                line = line2
             if "GRADLEVEL" in line:
                 print >> output, o.gradlevel,
             if "COURSENAME" in line:
@@ -64,6 +69,8 @@ class fromurl:
                 print >> output, o.url,  
             if "SEMESTER" in line:
                 print >> output, o.semester,
+            if ' ' not in line2:
+                break
         for f in localtimetable:
             if f[4]:
                 string = f[4]
