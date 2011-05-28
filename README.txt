@@ -27,5 +27,8 @@ DESCRIPTION - The course-description surrounded by quotation-marks ("). Note tha
 
 DRPSURL - The URL to the DRPS-page of the course.
 
-SEMESTER .semester (Semester, "1" means first semester, "2" means second semester, "3" means full year, and "0" means undefined
+SEMESTER .semester (Semester, "1" means first semester, "2" means second semester, "3" means full year, and "0" means undefined. A bit scetchy in that defined semesters are sometimes not picked up.
 
+
+TIMETABLE OUTPUT:
+The timetable (if available) for a course will be printed on lines immediately under the course-information. There will be one line for every weekday on which an event occurs, with every event taking place on that day being outputted in a given format. See config.txt for details of the timetable-output.
