@@ -8,7 +8,7 @@
 
 
 1. ABOUT:
-DRPS Scraper is a program that scrapes the University of Edinburgh Degree Program Regulations and outputs a text file with information about and a the timetables of all the courses. The program has a configuration-file in which the user can specify what information about the course they want. The program does not scrape courses that are not delivered.
+DRPS Scraper is a program that scrapes the University of Edinburgh Degree Program Regulations and outputs a text file with information about, and a the timetables for all the courses. The program has a configuration-file in which the user can specify what information about the course they want. The program does not scrape courses that are not delivered.
 
 The runtime of the program depends primarily on the speed of the internet-connection. On a quick connection it finishes within 20 minutes, but this may vary significantly on slower connections.
 

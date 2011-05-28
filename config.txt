@@ -1,4 +1,4 @@
-COURSENAME COURSECODE SCHOOLCODE CREDITS SCQFLEVEL SEMESTER NORMALYEAR DRPSURL
+COURSENAME COURSECODE SCHOOLCODE CREDITS SCQFLEVEL SEMESTER NORMALYEAR DRPSURL SCHOOLNAME
 ----------------------------------------------------------------------------
 PARAMETRES MUST BE ON THE FIRST LINE OF THE DOCUMENT. ANYTHING BELOW THE FIRST LINE WILL BE IGNORED.
 
@@ -40,4 +40,36 @@ DRPSURL - The URL to the DRPS-page of the course.
 SEMESTER .semester (Semester, "1" means first semester, "2" means second semester, "3" means full year, and "0" means undefined. A bit scetchy in that defined semesters are sometimes not picked up.
 
 
-Weeks can be a range (1-11) or comma-seperated numbers (4,6,8). Note that some full-year courses use 1-22, some don't.
+SCHOOL CODES:
+
+College of Humanities and Social Science:
+
+SU791 - School of Arts, Culture and Environment
+SU151 - School of Divinity
+SU819 - Moray House School of Education
+SU796 - School of Health in Social Science
+SU792 - School of History, Classics and Archaeology
+SU161 - School of Law
+SU795 - School of Literatures, Languages and Cultures
+SU780 - Business School
+SU793 - School of Philosophy, Psychology and Language Sciences
+SU809 - School of Social and Political Science
+SU284 - School of Economics
+
+College of Science and Engineering
+
+SU541 - School of Biological Sciences
+SU240 - School of Chemistry
+SU748 - School of Engineering
+SU849 - School of Geosciences
+SU747 - School of Informatics
+SU253 - School of Mathematics
+SU744 - School of Physics and Astronomy
+
+College of Medicine and Veterinary Medicine
+
+SU845 - College of Medicine and Veterinary Medicine
+SU336 - Royal (Dick) School of Veterinary Studies
+SU722 - School of Biomedical Sciences
+SU723 - School of Clinical Sciences and Community Health
+SU724 - School of Molecular and Clinical Medicine
