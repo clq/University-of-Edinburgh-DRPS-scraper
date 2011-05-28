@@ -42,15 +42,17 @@ class mainpage:
     def __init__ (self, url):
         self.page = urllib.urlopen(url)
     def frommainpage (self):
+        schoolnumber = 0
         while 1:
             pline = self.page.readline()
             if not pline:
                 break
             if '<a href="cx_s' in pline:
+                schoolnumber += 1
+                print "School ", schoolnumber, " of 23"
                 tempurl = re.sub('<li><a href="', "", pline)
                 tempurl = re.sub('">.*', "", tempurl).strip()
                 url = "https://www.star.euclid.ed.ac.uk/ipp/" + tempurl
-                print url
                 scrapeschool = schoolpage(url)
                 hm = scrapeschool.fromschoolpage()
 
