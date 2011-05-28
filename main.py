@@ -2,7 +2,7 @@ import urllib
 import re
 from urlhandler import *
 from scrapeclasses import *
-#http://www.star.euclid.ed.ac.uk/ipp/cx_sb_easc.htm
+
 class subjectpage:
     def __init__ (self, url):
         self.page = urllib.urlopen(url)
@@ -51,10 +51,22 @@ class mainpage:
                 tempurl = re.sub('<li><a href="', "", pline)
                 tempurl = re.sub('">.*', "", tempurl).strip()
                 url = "https://www.star.euclid.ed.ac.uk/ipp/" + tempurl
+                print url
                 scrapeschool = schoolpage(url)
                 hm = scrapeschool.fromschoolpage()
                 
-print "Testing"
+#Main program
 program = mainpage("http://www.star.euclid.ed.ac.uk/ipp/cx_schindex.htm")
 hm = program.frommainpage()
 
+#To test individual schools
+#program = schoolpage("http://www.star.euclid.ed.ac.uk/ipp/cx_s_su780.htm")
+#hm = program.fromschoolpage()
+
+#To test individual subject-areas
+#scrapesubjects = subjectpage("http://www.star.euclid.ed.ac.uk/ipp/cx_sb_accn.htm")
+#hm = scrapesubjects.fromsubjectpage()
+
+#To test individual courses
+#program = fromurl("http://www.star.euclid.ed.ac.uk/ipp/cxbust10023.htm")
+#running = program.run()
