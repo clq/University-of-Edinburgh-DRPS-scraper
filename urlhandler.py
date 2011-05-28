@@ -37,7 +37,7 @@ class fromurl:
         line2 = config.readline()
         flag = False
         while 1:
-            if flag = True:
+            if flag == True:
                 line2 = re.sub('^ ', "", line2)
             if ' ' in line2:
                 line = line2[:line2.index(" ")]
