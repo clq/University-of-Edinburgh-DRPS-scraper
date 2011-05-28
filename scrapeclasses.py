@@ -105,6 +105,7 @@ class scraping:
         name = self.use
         name = re.sub('.*School of ', "", name)
         name = re.sub('.*Business School', "Business School", name)
+        name = re.sub('.*College of Medicine and Veterinary Medicine', "College of Medicine and Veterinary Medicine", name)
         name = re.sub('</a> :.*', "", name)
         name = re.sub('\)</a>.*', "", name)
         name = re.sub('\n', "", name).strip()
