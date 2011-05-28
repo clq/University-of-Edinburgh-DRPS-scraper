@@ -1,3 +1,0 @@
-Put the timetable-creation into a class
-Option of whether to output timetable-data or not
-Make proper documentation
