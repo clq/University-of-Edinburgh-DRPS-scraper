@@ -14,7 +14,7 @@ The runtime of the program depends primarily on the speed of the internet-connec
 
 2. USAGE:
 
-The program currently consists of four files, main.py, scrapeclasses.py, urlhandler.py and config.txt. config.txt in the configuration-file, for more information on configuration see config.txt.
+The program currently consists of four files, main.py, scrapeclasses.py, urlhandler.py and config.txt. config.txt is the configuration-file. For more information on configuring the program, see config.txt.
 The program output is output.txt. Make sure that you have write-access to the folder in which you run the program.
 Run the program by running main.py ("python main.py" from the command-line)
 
