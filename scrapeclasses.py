@@ -166,7 +166,6 @@ class timetablescrape:
         data = re.sub('^<tr><td class="data1nobg" nowrap="nowrap">', '</td></tr><tr><td class="data1nobg" nowrap="nowrap">', data)
         data = re.sub('</br>', "", data)
         data = re.sub('<b>or</b>', " OR", data)
-        print data
         while "nowrap" in data:
             data = re.sub('^</td></tr><tr><td class="data1nobg" nowrap="nowrap">', "", data)
             location = data[:data.index("<")]
